@@ -152,6 +152,12 @@ footer{text-align:center;padding:25px;background:#050d1a;color:var(--muted);font
 <!-- Contact + Appointment + Volunteer -->
 <section id="contact">
   <div class="container contact">
+      <h3 class="section-title">Contact & Appointment</h3>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <p><input type="text" name="name" placeholder="Your Name" required></p>
+        <p><input type="email" name="email" placeholder="Your Email" required></p>
+        <p><input type="text" name="phone" placeholder="Phone Number"></p>
         <p><input type="text" name="service" placeholder="Service / Query"></p>
         <p><input type="date" name="date" placeholder="Preferred Date"></p>
         <p><textarea name="message" placeholder="Message"></textarea></p>
