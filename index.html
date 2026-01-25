@@ -9,27 +9,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-:root{--primary:#081a33;--secondary:#00e5ff;--accent:#0a2d57;--text:#e6f1ff;--muted:#9fb3c8}
+:root{--primary:#081a33;--secondary:#00e5ff;--text:#e6f1ff;--muted:#9fb3c8}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:linear-gradient(135deg,#050d1a,#0a2342);color:var(--text);line-height:1.6}
+body{background:linear-gradient(135deg,#050d1a,#0a2342);color:var(--text)}
 a{text-decoration:none;color:inherit}
-header{position:fixed;top:0;width:100%;background:rgba(5,13,26,.85);backdrop-filter:blur(10px);z-index:1000}
+
+header{position:fixed;top:0;width:100%;background:rgba(5,13,26,.9);z-index:1000}
 nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
 nav h1{color:var(--secondary)}
-nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+nav ul{display:flex;gap:18px;list-style:none;flex-wrap:wrap}
 nav ul li a:hover{color:var(--secondary)}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:url('https://images.unsplash.com/photo-1581093588401-22d8a1c6f7e9') center/cover no-repeat}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;
+background:url('https://images.unsplash.com/photo-1581093588401-22d8a1c6f7e9') center/cover no-repeat}
 .hero-overlay{background:rgba(5,13,26,.75);padding:40px;border-radius:16px}
+
 section{padding:80px 20px}
 .container{max-width:1200px;margin:auto}
 .section-title{text-align:center;font-size:30px;color:var(--secondary);margin-bottom:40px}
-.services,.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
-.card{background:rgba(255,255,255,.04);padding:25px;border-radius:18px}
+
+.services,.gallery,.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card,.review{background:rgba(255,255,255,.05);padding:25px;border-radius:16px}
+
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-box{background:rgba(255,255,255,.04);padding:30px;border-radius:16px}
+.contact-box{background:rgba(255,255,255,.05);padding:30px;border-radius:16px}
+
 input,textarea{width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:10px}
-footer{text-align:center;padding:25px;background:#050d1a;color:#9fb3c8}
-@media(max-width:900px){.contact{grid-template-columns:1fr}}
+button{cursor:pointer}
+
+footer{text-align:center;padding:25px;background:#050d1a;color:var(--muted)}
+
+@media(max-width:900px){
+.contact{grid-template-columns:1fr}
+}
 </style>
 </head>
 
@@ -42,61 +54,98 @@ footer{text-align:center;padding:25px;background:#050d1a;color:#9fb3c8}
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#gallery">Gallery</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
 <div class="hero-overlay">
 <h2>Future-Ready Mental & Physical Healthcare</h2>
-<p>Ethical, confidential & affordable healthcare in Mirzapur</p>
+<p>NGO & Multispeciality Clinic | Mirzapur, Uttar Pradesh</p>
 </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h3 class="section-title">About Wellness Wing</h3>
+<p style="text-align:center;max-width:800px;margin:auto">
+Wellness Wing is an NGO & multispeciality clinic providing ethical, affordable and confidential
+mental health, rehabilitation and community services in Mirzapur.
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
 <section id="services">
 <div class="container">
 <h3 class="section-title">Our Services</h3>
 <div class="services">
 <div class="card">Mental Health Services</div>
 <div class="card">Psychotherapy & Counselling</div>
+<div class="card">Psychological Testing</div>
 <div class="card">Rehabilitation Services</div>
+<div class="card">Career & Academic Guidance</div>
 <div class="card">NGO Community Programs</div>
 </div>
 </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery">
+<div class="container">
+<h3 class="section-title">Gallery</h3>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1559757175-5700dde675bc">
+<img src="https://images.unsplash.com/photo-1584467735871-b5e44b28e3c9">
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+<div class="container">
+<h3 class="section-title">Reviews</h3>
+<div class="reviews">
+<div class="review">Professional & confidential care.</div>
+<div class="review">Much needed mental health support in Mirzapur.</div>
+<div class="review">Ethical, affordable & modern.</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT + WHATSAPP APPOINTMENT -->
 <section id="contact">
 <div class="container contact">
 
-<!-- WHATSAPP APPOINTMENT FORM -->
 <div class="contact-box">
-<h3 class="section-title">Contact & Appointment</h3>
+<h3 class="section-title">Book Appointment</h3>
 
 <form onsubmit="sendWhatsApp(); return false;">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="text" id="phone" placeholder="Phone Number" required>
-<input type="text" id="service" placeholder="Service / Query">
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<input id="service" placeholder="Service / Query">
 <input type="date" id="date">
 <textarea id="message" placeholder="Message"></textarea>
 
-<button type="submit" style="background:#25D366;color:#fff;padding:12px;border:none;border-radius:10px;width:100%;">
-<i class="fab fa-whatsapp"></i> Book Appointment on WhatsApp
+<button style="background:#25D366;color:white;padding:12px;border:none;border-radius:10px;width:100%">
+<i class="fab fa-whatsapp"></i> Book on WhatsApp
 </button>
 </form>
 </div>
 
-<!-- MAP & DETAILS -->
 <div class="contact-box">
 <h3 class="section-title">Location & Directions</h3>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5550791102974!2d82.59063277394647!3d25.15072863358399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fc11b99ac5ead%3A0x1745bf017f053d09!2sWellness%20Wing!5e0!3m2!1sen!2sin!4v1769363005604"
-width="100%" height="250" style="border:0;border-radius:14px;" loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5550791102974!2d82.59063277394647!3d25.15072863358399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fc11b99ac5ead%3A0x1745bf017f053d09!2sWellness%20Wing!5e0!3m2!1sen!2sin"
+width="100%" height="250" style="border:0;border-radius:14px"></iframe>
 
-<p>
-<strong>Phone:</strong> 9208791272<br>
-<strong>Email:</strong> wellnesswing25@gmail.com
-</p>
+<p><strong>Phone:</strong> 9208791272<br>
+<strong>Email:</strong> wellnesswing25@gmail.com</p>
 
 <p>
 <a href="https://instagram.com/wellness_wing_" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -114,19 +163,13 @@ width="100%" height="250" style="border:0;border-radius:14px;" loading="lazy"></
 
 <script>
 function sendWhatsApp(){
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var service=document.getElementById("service").value;
-var date=document.getElementById("date").value;
-var message=document.getElementById("message").value;
-
-var text=
-"New Appointment Request%0A"+
-"Name: "+name+
-"%0APhone: "+phone+
-"%0AService: "+service+
-"%0ADate: "+date+
-"%0AMessage: "+message;
+var text =
+"New Appointment%0A"+
+"Name: "+name.value+
+"%0APhone: "+phone.value+
+"%0AService: "+service.value+
+"%0ADate: "+date.value+
+"%0AMessage: "+message.value;
 
 window.open("https://wa.me/919208791272?text="+text,"_blank");
 }
