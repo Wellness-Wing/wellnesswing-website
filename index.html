@@ -14,62 +14,75 @@
 --text:#e6f1ff;--muted:#9fb3c8
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:linear-gradient(135deg,#050d1a,#0a2342);color:var(--text);line-height:1.6}
+body{background:linear-gradient(135deg,#050d1a,#0a2342);color:var(--text);line-height:1.7}
 a{text-decoration:none;color:inherit}
 
-header{position:fixed;top:0;width:100%;background:rgba(5,13,26,.85);backdrop-filter:blur(10px);z-index:1000}
-nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+header{
+position:fixed;top:0;width:100%;
+background:rgba(5,13,26,.9);
+backdrop-filter:blur(10px);
+z-index:1000
+}
+nav{
+max-width:1200px;margin:auto;
+display:flex;justify-content:space-between;
+align-items:center;padding:14px 20px
+}
 .brand{display:flex;align-items:center;gap:10px}
-.brand img{height:40px}
-nav h1{color:var(--secondary);font-weight:600}
+.brand img{height:42px}
+nav h1{color:var(--secondary);font-size:20px}
 nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
-nav ul li a{font-size:14px;opacity:.9;transition:.3s}
+nav ul li a{font-size:14px;opacity:.9}
 nav ul li a:hover{color:var(--secondary)}
-.login-btn{border:1px solid var(--secondary);padding:6px 14px;border-radius:20px;color:var(--secondary)}
 
 .hero{
-min-height:100vh;display:flex;align-items:center;justify-content:center;
+min-height:100vh;display:flex;
+align-items:center;justify-content:center;
 text-align:center;padding:120px 20px;
 background:url('https://images.unsplash.com/photo-1581093588401-22d8a1c6f7e9') center/cover no-repeat
 }
 .hero-overlay{
-background:rgba(5,13,26,.75);
-padding:40px;border-radius:16px;
-max-width:900px;
-animation:fadeUp 1.2s ease
+background:rgba(5,13,26,.78);
+padding:45px;border-radius:18px;
+max-width:900px
 }
 .hero h2{font-size:42px;color:var(--secondary)}
-.hero p{max-width:700px;margin:20px auto;color:var(--muted)}
+.hero p{margin-top:18px;color:var(--muted)}
 
 section{padding:80px 20px}
 .container{max-width:1200px;margin:auto}
-.section-title{text-align:center;font-size:30px;color:var(--secondary);margin-bottom:40px}
+.section-title{text-align:center;font-size:30px;color:var(--secondary);margin-bottom:35px}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about img{width:100%;border-radius:16px}
+.about img{width:100%;border-radius:18px}
 
-.services,.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
 .card{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.08);
-padding:25px;border-radius:18px;transition:.4s
+background:rgba(255,255,255,.05);
+padding:25px;border-radius:18px;
+border:1px solid rgba(255,255,255,.1)
 }
-.card:hover{transform:translateY(-8px);border-color:var(--secondary)}
 .card h4{color:var(--secondary);margin-bottom:10px}
 .card p{font-size:14px;color:var(--muted)}
 
-.gallery img,.gallery iframe{width:100%;border-radius:14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.gallery img,iframe{width:100%;border-radius:14px}
 
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .contact-box{
-background:rgba(255,255,255,.04);
-padding:30px;border-radius:16px
+background:rgba(255,255,255,.06);
+padding:35px;border-radius:18px
 }
-.contact-box iframe{border-radius:14px}
+input,textarea{
+width:100%;padding:10px;margin-bottom:10px;
+border-radius:8px;border:none
+}
 
-.direction-btn{
-padding:10px 20px;background:var(--secondary);
-color:#050d1a;border:none;border-radius:10px;cursor:pointer;margin-top:10px
+.whatsapp-btn{
+display:inline-block;margin-top:15px;
+background:#25D366;color:#050d1a;
+padding:12px 22px;border-radius:25px;
+font-weight:600
 }
 
 footer{
@@ -77,11 +90,6 @@ text-align:center;padding:25px;
 background:#050d1a;color:var(--muted);font-size:13px
 }
 footer a{margin:0 10px;color:var(--secondary)}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:none}
-}
 
 @media(max-width:900px){
 .about,.contact{grid-template-columns:1fr}
@@ -95,15 +103,15 @@ to{opacity:1;transform:none}
 <header>
 <nav>
 <div class="brand">
-<img src="logo.png" alt="Wellness Wing">
+<img src="logo.png" alt="Wellness Wing Logo">
 <h1>Wellness Wing</h1>
 </div>
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#gallery">Gallery</a></li>
+<li><a href="#appointment">Appointment</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a class="login-btn" href="#">Login</a></li>
 </ul>
 </nav>
 </header>
@@ -112,9 +120,9 @@ to{opacity:1;transform:none}
 <div class="hero-overlay">
 <h2>Future-Ready Mental & Physical Healthcare</h2>
 <p>
-Wellness Wing is a multidisciplinary NGO & Multispeciality Clinic working
-primarily in mental health, along with physical health, research,
-animal welfare and social wellbeing.
+Wellness Wing is a multidisciplinary NGO, Multispeciality Clinic & Research Center
+working in mental health, physical health, animal welfare, research and social welfare,
+with a primary focus on accessible and ethical mental healthcare.
 </p>
 </div>
 </section>
@@ -124,9 +132,14 @@ animal welfare and social wellbeing.
 <div>
 <h3 class="section-title">About Wellness Wing</h3>
 <p>
-Located in Krishnapuram Colony, Pakka Pokhara, Ramaipatti, Mirzapur (UP),
-Wellness Wing integrates mental health, physical health,
-counselling, rehabilitation and research services under one ecosystem.
+Wellness Wing is a registered NGO and healthcare initiative based in Mirzapur, Uttar Pradesh.
+Under the NGO, <strong>Wellness Wing Multispeciality Clinic & Research Center</strong> operates as a
+professional clinical unit providing paid consultation and advanced services in mental
+and physical health.
+</p>
+<p>
+Our work spans community mental health, research, rehabilitation, counselling,
+women empowerment, youth development and social welfare programs.
 </p>
 </div>
 <img src="https://images.unsplash.com/photo-1580281657521-6b6f0c5c1c18">
@@ -137,11 +150,12 @@ counselling, rehabilitation and research services under one ecosystem.
 <div class="container">
 <h3 class="section-title">Our Services</h3>
 <div class="services">
-<div class="card"><h4>Mental Health Services</h4><p>Depression, anxiety, stress, trauma, addiction and sexual health issues.</p></div>
-<div class="card"><h4>Physical Health Support</h4><p>Mind-body wellness, lifestyle management and rehabilitation.</p></div>
-<div class="card"><h4>Psychological Testing</h4><p>Standardized psychometric, IQ and personality assessments.</p></div>
-<div class="card"><h4>Psychotherapy & Counselling</h4><p>CBT and evidence-based therapeutic interventions.</p></div>
-<div class="card"><h4>NGO Community Programs</h4><p>Mental health awareness, camps and social welfare activities.</p></div>
+<div class="card"><h4>Mental Health Services</h4><p>Depression, anxiety, stress, trauma, addiction, sleep & sexual health issues.</p></div>
+<div class="card"><h4>Psychotherapy</h4><p>CBT, supportive therapy and evidence-based psychological interventions.</p></div>
+<div class="card"><h4>Psychological Testing</h4><p>IQ, personality, aptitude and clinical assessments.</p></div>
+<div class="card"><h4>Physical Health & Rehabilitation</h4><p>Mind-body wellness and rehabilitation services.</p></div>
+<div class="card"><h4>Research & Training</h4><p>Academic research, internships and capacity building.</p></div>
+<div class="card"><h4>NGO Community Programs</h4><p>Mental health camps, awareness, women & youth empowerment.</p></div>
 </div>
 </div>
 </section>
@@ -152,40 +166,62 @@ counselling, rehabilitation and research services under one ecosystem.
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc">
 <img src="https://images.unsplash.com/photo-1584467735871-b5e44b28e3c9">
-<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+<iframe height="220" src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
 </div>
+</div>
+</section>
+
+<section id="appointment">
+<div class="container contact-box" style="text-align:center">
+<h3 class="section-title">Appointment & Enquiry</h3>
+<p>Clinic consultation is available by prior appointment.</p>
+<a class="whatsapp-btn"
+href="https://wa.me/919208791272?text=Hello%20I%20want%20to%20book%20an%20appointment%20at%20Wellness%20Wing">
+<i class="fab fa-whatsapp"></i> Book via WhatsApp
+</a>
 </div>
 </section>
 
 <section id="contact">
 <div class="container contact">
 <div class="contact-box">
-<h3 class="section-title">Appointment & Enquiry</h3>
-<p>For clinic consultation, appointments are handled via WhatsApp.</p>
-<a class="direction-btn" href="https://wa.me/919208791272" target="_blank">
-<i class="fab fa-whatsapp"></i> Book on WhatsApp
-</a>
-</div>
-
-<div class="contact-box">
-<h3 class="section-title">Location & Directions</h3>
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5550791102974!2d82.59063277394647!3d25.15072863358399"
-width="100%" height="260" style="border:0" loading="lazy"></iframe>
-<a href="https://www.google.com/maps/dir/?api=1&destination=Wellness+Wing+Mirzapur+UP"
-target="_blank" class="direction-btn">
-Get Directions
-</a>
-<p><br>
+<h3 class="section-title">Contact Details</h3>
+<p>
+<strong>Address:</strong><br>
+Krishnapuram Colony, Pakka Pokhara,<br>
+Ramaipatti Road, Mirzapur, UP – 231001
+</p>
+<p>
 <strong>Phone:</strong> 9208791272, 7985905988<br>
 <strong>Email:</strong> wellnesswing25@gmail.com
 </p>
+</div>
+
+<div class="contact-box">
+<h3 class="section-title">Location</h3>
+<a href="https://wa.me/919208791272"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/wellness_wing_/"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/profile.php?id=61577094144342"><i class="fab fa-facebook"></i></a>
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3611.546911454765!2d82.590935!3d25.150968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1s0x398fc11b99ac5ead%3A0x1745bf017f053d09!2sWellness%20Wing!5e0!3m2!1sen!2sin!4v1760000000000"
+  width="100%"
+  height="300"
+  style="border:0; border-radius:14px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+"></iframe>
+<a class="whatsapp-btn" target="_blank"
+href="https://www.google.com/maps/dir/?api=1&destination=Krishnapuram+Colony+Pakka+Pokhara+Ramaipatti+Road+Mirzapur+231001">
+Get Directions
+</a>
 </div>
 </div>
 </section>
 
 <footer>
-© 2026 Wellness Wing | NGO & Multispeciality Clinic<br>
+© 2026 Wellness Wing | NGO, Multispeciality Clinic & Research Center<br>
 <a href="https://wa.me/919208791272"><i class="fab fa-whatsapp"></i></a>
 <a href="https://www.instagram.com/wellness_wing_/"><i class="fab fa-instagram"></i></a>
 <a href="https://www.facebook.com/profile.php?id=61577094144342"><i class="fab fa-facebook"></i></a>
