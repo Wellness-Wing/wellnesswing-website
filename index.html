@@ -7,6 +7,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+.brand img{
+  height:42px;
+  filter:drop-shadow(0 0 6px rgba(0,229,255,0.4));
+}
 
 <style>
 :root{
@@ -95,6 +99,32 @@ footer a{margin:0 10px;color:var(--secondary)}
 .about,.contact{grid-template-columns:1fr}
 .hero h2{font-size:32px}
 }
+/* ===== Director Section ===== */
+
+.director-box{
+  display:flex;
+  gap:30px;
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:16px;
+  align-items:flex-start;
+}
+
+.director-photo img{
+  width:200px;
+  border-radius:12px;
+  object-fit:cover;
+}
+
+.director-message p{
+  margin-bottom:14px;
+  line-height:1.7;
+}
+
+.director-name{
+  margin-top:20px;
+  color:#00e5ff;
+}
 </style>
 </head>
 
@@ -103,8 +133,8 @@ footer a{margin:0 10px;color:var(--secondary)}
 <header>
 <nav>
 <div class="brand">
-<img src="logo.png" alt="Wellness Wing Logo">
-<h1>Wellness Wing</h1>
+  <img src="my new logo for Clinic final.png" alt="Wellness Wing Logo">
+  <h1>Wellness Wing</h1>
 </div>
 <ul>
 <li><a href="#about">About</a></li>
@@ -118,6 +148,7 @@ footer a{margin:0 10px;color:var(--secondary)}
 
 <section class="hero">
 <div class="hero-overlay">
+<img src="my new logo for Clinic final.png" alt="Wellness Wing Logo" style="width:120px;margin-bottom:20px;">
 <h2> Wellness Wing</h2>
 <p>
 Wellness Wing is a multidisciplinary NGO, Multispeciality Clinic & Research Center
@@ -280,7 +311,7 @@ women empowerment, youth development and social welfare programs.
         </p>
 
         <p class="director-name">
-          <strong>— Mr. Amresh Kumar Yadav</strong><br>
+          <strong>— Dr. Amresh Kumar Yadav</strong><br>
           Director, Wellness Wing
         </p>
       </div>
@@ -288,30 +319,6 @@ women empowerment, youth development and social welfare programs.
   </div>
 </section>
 
-.director-box{
-  display:flex;
-  gap:30px;
-  background:rgba(255,255,255,0.05);
-  padding:30px;
-  border-radius:16px;
-  align-items:flex-start;
-}
-
-.director-photo img{
-  width:200px;
-  border-radius:12px;
-  object-fit:cover;
-}
-
-.director-message p{
-  margin-bottom:14px;
-  line-height:1.7;
-}
-
-.director-name{
-  margin-top:20px;
-  color:#00e5ff;
-}
 
 
 
@@ -399,6 +406,10 @@ Ramaipatti Road, Mirzapur, UP – 231001
 </section>
 
 <footer>
+<img src="my new logo for Clinic final.png"
+     alt="Wellness Wing Logo"
+     style="width:80px;margin-bottom:10px;">
+
   © 2026 Wellness Wing | NGO, Multispeciality Clinic & Research Center
   <br>
   <a href="https://www.instagram.com/wellness_wing_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
